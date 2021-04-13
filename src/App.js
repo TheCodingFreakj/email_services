@@ -1,6 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 //https://app.circleci.com/pipelines/github/TheCodingFreakj/email_services?branch=circleci-project-setup
+//https://circleci.com/blog/continuous-integration-with-code-climates-automated-code-review/
 //https://www.freecodecamp.org/news/how-to-set-up-continuous-integration-and-deployment-for-your-react-app-d09ae4525250/
 function App() {
   return (
