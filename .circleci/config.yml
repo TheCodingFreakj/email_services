@@ -3,6 +3,8 @@ orbs:
   node: circleci/node@3.0.0
 jobs:
   build:
+     environment:
+      CC_TEST_REPORTER_ID: e7f57bdfbbf935860f35d140bf7c38717550f50dffc2ab50ed51b1914f41d35d
      docker:
        - image: circleci/node:8
    
@@ -28,9 +30,6 @@ jobs:
                       ./cc-test-reporter before-build 
                        npm test  --coverage   
                      ./cc-test-reporter after-build --exit-code $?
-
-                
-
 workflows:
   node-tests:
     jobs:
