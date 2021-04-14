@@ -26,10 +26,7 @@ jobs:
                 name: Run tests
                 command: npm test
                 when: always
-       - run:
-                name: Run coverage
-                command: npm run cover
-                when: always
+   
        - run:
                 name: Setup Code Climate test-reporter
                 command: |
