@@ -41,9 +41,6 @@ jobs:
 
        - store_artifacts: # upload test coverage as artifact
                 path: ./coverage/lcov.info
-                
-       
-       
        - run:
                 name: Send coverage report to Code Climate
                 command:
