@@ -24,12 +24,7 @@ jobs:
                 key: dependency-cache-{{ checksum "package.json" }} 
        - run:
                 name: Run tests
-                command: |
-                          npm test -- --coverage | grep Statements | awk '{print $3}' | xargs -I {} curl \
-                                 --header "Authorization: Token e7b60e8e-6a92-4690-a89b-f4e1eca5d146" \
-                                 --data-urlencode value="{}" \
-                                --data sha="$(git rev-parse HEAD)" \
-                                https://seriesci.com/api/TheCodingFreakj/email_services/:series/one
+                command: npm test
                 when: always
        - run:
                 name: Run coverage
