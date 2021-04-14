@@ -27,11 +27,8 @@ jobs:
                 command: |
                           npm test -- --coverage | grep Statements | awk '{print $3}' | xargs -I {} curl \
                                  --header "Authorization: Token e7b60e8e-6a92-4690-a89b-f4e1eca5d146" \
-                                 --header "Content-Type: application/json" \
-                                --data "{
-                                           \"value\":\"42 %\",
-                                           \"sha\":\"$(git rev-parse HEAD)\"
-                                        }" \
+                                 --data-urlencode value="{}" \
+                                --data sha="$(git rev-parse HEAD)" \
                                 https://seriesci.com/api/TheCodingFreakj/email_services/:series/one
                 when: always
        - run:
