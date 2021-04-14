@@ -3,11 +3,12 @@ orbs:
   node: circleci/node@3.0.0
 jobs:
   build:
+     working_directory: ~/email_services
      environment:
       CC_TEST_REPORTER_ID: e7f57bdfbbf935860f35d140bf7c38717550f50dffc2ab50ed51b1914f41d35d
      docker:
        - image: circleci/node:8
-   
+        
      steps:
        - checkout
        - restore_cache: # special step to restore the dependency cache
