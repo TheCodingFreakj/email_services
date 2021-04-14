@@ -11,6 +11,9 @@ jobs:
         
      steps:
        - checkout
+       - add_ssh_keys:
+             fingerprints:
+                 - "ed:d2:40:c8:7c:4e:cd:45:cc:0b:00:e2:ae:c7:75:4c"
        - restore_cache: # special step to restore the dependency cache
              keys:
                     - dependency-cache-{{ checksum "package.json" }}
