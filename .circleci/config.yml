@@ -24,7 +24,7 @@ jobs:
            command: npm install 
        - save_cache:
                 paths:
-                    - node_modules
+                    - ~/email_services/node_modules
                 key: dependency-cache-{{ checksum "package.json" }} 
        - run:
                 name: Run tests
