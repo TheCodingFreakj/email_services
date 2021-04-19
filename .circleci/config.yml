@@ -44,6 +44,8 @@ jobs:
 
        - store_artifacts: # upload test coverage as artifact
                 path: ./coverage/lcov.info
+       - store_test_results:
+                path: ~/test-results
       
      
      
