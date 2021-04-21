@@ -7,6 +7,8 @@ describe("App testing", () => {
     wrapper = shallow(<App />);
   });
   test("render the App header", () => {
-    expect(wrapper.find("h1").text()).toContain("This is app file");
+    expect(wrapper.find("h1").text()).toContain(
+      "Welcome to the Email Services App"
+    );
   });
 });
