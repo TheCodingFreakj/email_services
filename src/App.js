@@ -1,13 +1,16 @@
 import "./App.css";
-
-//https://circleci.com/blog/continuous-integration-with-code-climates-automated-code-review/
-//https://www.freecodecamp.org/news/how-to-set-up-continuous-integration-and-deployment-for-your-react-app-d09ae4525250/
-function App() {
+import EmailServices from "./components/emailservices";
+const App = () => {
   return (
     <div className="App">
-      <h1>This is app file</h1>
+      <h1>Welcome to the Email Services App</h1>
+
+      <EmailServices />
     </div>
   );
-}
+};
+
+//https://dashboard.emailjs.com/sign-in
+//https://sheelahb.com/blog/how-to-send-email-from-react-without-a-backend/
 
 export default App;
